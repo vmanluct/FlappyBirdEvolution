@@ -24,6 +24,7 @@ public:
 		pipe = new Pipe();
 
 
+
 		y = 400;
 		vel = 0;
 	}

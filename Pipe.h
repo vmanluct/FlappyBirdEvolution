@@ -27,6 +27,7 @@ public:
 		pipeImage.flipVertically();
 		lowerPipe.loadFromImage(pipeImage);
 
+
 		x = (float)(450 + upperPipe.getSize().x);
 		y = 100.0f + (float)(rand() % 5 - 3) * 50;
 		scored = false;

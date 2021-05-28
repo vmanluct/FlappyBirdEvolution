@@ -20,6 +20,7 @@ void Pipe::draw(RenderWindow& window)
 {
     lowerPipeSp = Sprite(lowerPipe);
     upperPipeSp = Sprite(upperPipe);
+
     upperPipeSp.setPosition(x, y + 340);
     lowerPipeSp.setPosition(x, y - 340);
 

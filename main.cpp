@@ -20,6 +20,7 @@ int main() {
 
 	while (window.isOpen()) {
 		float time = clk.getElapsedTime().asSeconds();
+
 		clk.restart();
 		timer += time;
 

@@ -42,6 +42,7 @@ void Bird::update()
         if (getRect().left > pipe->x + pipe->upperPipe.getSize().x &&
             pipe->scored == false) {
             pipe->scored = true;
+
             cout << "score";
         }
         if (pipe->x + pipe->upperPipe.getSize().x <= 0) {
