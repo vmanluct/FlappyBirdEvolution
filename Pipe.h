@@ -6,6 +6,11 @@ using namespace sf;
 using namespace std;
 class Pipe
 {
+private:
+	void initVariables();
+	void initTexture();
+	void initSprite();
+
 public:
 	Texture lowerPipe;
 	Texture upperPipe;
@@ -18,20 +23,7 @@ public:
 	bool scored;
 	string path = "images/pipe.png";
 
-	Pipe() {
-		Image pipeImage;
-		if (!pipeImage.loadFromFile(path)) {
-			cout << "Error";
-		}
-		upperPipe.loadFromImage(pipeImage);
-		pipeImage.flipVertically();
-		lowerPipe.loadFromImage(pipeImage);
-
-
-		x = (float)(450 + upperPipe.getSize().x);
-		y = 100.0f + (float)(rand() % 5 - 3) * 50;
-		scored = false;
-	}
+	Pipe();
 
 	FloatRect getUpperRect() const;
 
@@ -40,5 +32,7 @@ public:
 	void draw(RenderWindow &window);
 
 	void update();
+
+	void render(RenderTarget& target);
 };
 
