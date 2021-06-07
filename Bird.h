@@ -9,9 +9,11 @@ using namespace sf;
 class Bird
 {
 private:
+	//Initializers
 	void initVariables();
 	void initSprite();
 
+	//Vision for the bird
 	float calcYDistanceToTopPipe();
 	float calcYDistanceToBotPipe();
 	float calcYDistanceToGround();
@@ -42,30 +44,30 @@ public:
 	int score;
 	int fitness;
 
-	Bird();
-	FloatRect getRect();
+	Bird(); //Constructor
+	FloatRect getRect(); //Hitbox
 
-	void mutate(float mr);
+	void mutate(float mr); //Mutate the brain of the bird
 
-	void look();
+	void look(); //Calculate all the different things the bird can see
 
-	void think();
+	void think(); //Think about what move to do
 
-	void Collision();
+	void Collision(); //Check if bird hit pipes, ceiling, or floor
 
-	void updateMovement();
+	void updateMovement(); //Move bird up and down
 
-	void flap();
+	void flap(); //Apply upward velocity to the bird
 
-	void update();
+	void update(); //Update everything about the bird
 
-	int calcFitness();
+	int calcFitness(); //Check how well the bird is doing
 
-	Bird crossover(Bird partner);
+	Bird crossover(Bird partner); //Breed two birds to create a child
 
-	Bird clone();
-
-	void render(RenderTarget& target);
+	Bird clone(); //Return a copy of the bird
+	
+	void render(RenderTarget& target); //Draw the bird to the screen
 
 };
 

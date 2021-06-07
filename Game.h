@@ -8,7 +8,7 @@ using namespace sf;
 class Game
 {
 private:
-	//Window
+	//Game Graphics
 	RenderWindow window;
 	VideoMode videoMode;
 	Event ev;
@@ -17,23 +17,33 @@ private:
 	Texture bgTexture;
 	Sprite bgSprite;
 
-	Population* population;
+	Population* population; //All the birds for evolution
 
-	void initWindow();
+	void initWindow(); //Create window for game
+	void initPopulation(); //Add birds to population
 
-	void initPopulation();
-
+	//Neural network stuff
 	float prevBestFitness;
 	int count;
 
-public:
-	Game();
-	~Game();
+	//Neural Network Graphics
+	RenderWindow netWindow;
+	VideoMode netMode;
+	Event netEv;
 
-	void updatePopulation();
-	void update();
-	void renderPopulation();
-	void render();
-	const RenderWindow& getWindow();
+	void initNNWindow(); //Create window to show neural network
+
+public:
+	Game(); //Constructor
+	~Game(); //Destrucotr
+
+	void updatePopulation(); //Update positions of birds, and pipes
+	void update(); //Update everything in the windows
+	void renderPopulation(); //Draw all game info to window
+	void render(); //Draw the game, and neural network
+
+	//Getter function
+	const RenderWindow& getWindow(); 
+	const RenderWindow& getNNWindow();
 };
 
