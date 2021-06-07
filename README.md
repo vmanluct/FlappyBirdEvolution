@@ -4,6 +4,8 @@ Used Eigen to have matrices of weights between neurons
 
 Used Neural Network and genetic algorithm to have AI improve, and become good at the game
 
+If you want to use, you have to have SFML and Eigen downloaded on your computer, you can then clone the repo into Visual Studio and run it.
+
 Image of game with neural network of best bird
 
 
