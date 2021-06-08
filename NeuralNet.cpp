@@ -117,11 +117,11 @@ bool NeuralNet::readFiletoNetwork(std::string file_name)
 			}
 			whi.fromArray(inpArr);
 			for (int i = 0; i < hidSize; i++) {
-				file >> inpArr[i];
+				file >> hidArr[i];
 			}
 			whh.fromArray(hidArr);
 			for (int i = 0; i < outSize; i++) {
-				file >> inpArr[i];
+				file >> outArr[i];
 			}
 			who.fromArray(outArr);
 		}
